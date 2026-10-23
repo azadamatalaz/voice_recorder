@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Snap Folders",
+  "version": "1.0.0",
+  "description": "Take screenshots and organize them into folders.",
+  "permissions": ["activeTab", "scripting", "storage", "unlimitedStorage", "downloads", "identity"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Snap Folders",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "capture-visible": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Capture visible area into the current folder"
+    },
+    "capture-region": {
+      "suggested_key": { "default": "Alt+Shift+A" },
+      "description": "Select a region to capture into the current folder"
+    }
+  }
+}
